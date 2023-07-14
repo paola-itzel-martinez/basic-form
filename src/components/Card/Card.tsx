@@ -1,7 +1,13 @@
 import React from "react";
-import { Wrapper } from "./Card.styles";
+import { Title, Wrapper } from "./Card.styles";
 import { CardProps } from "./Card.types";
 
-const Card = ({ children }: CardProps) => <Wrapper>{children}</Wrapper>;
+const Card = ({ children, title }: CardProps) => (
+  <Wrapper>
+    <Title>{title}</Title>
+
+    {children}
+  </Wrapper>
+);
 
 export default Card;
